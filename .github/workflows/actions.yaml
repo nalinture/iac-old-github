@@ -1,11 +1,12 @@
-name: Vinayakar Chathurthi
+name: Remote_runner
 
 on: workflow_dispatch
 
 jobs:
-  - name: Pillaiyar
+  Test:
     runs-on: self-hosted
 
     steps:
       - name: Birthday Wishes
-        run: echo "Happy Birthday Pillaiyarappa"
+      - run: echo "Happy Birthday Pillaiyarappa"
+      - run: echo $HOSTNAME
