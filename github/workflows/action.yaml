@@ -1,0 +1,11 @@
+name: Vinayakar Chathurthi
+
+on: workflow_dispatch
+
+jobs:
+  - name: Pillaiyar
+    runs-on: self-hosted
+
+    steps:
+      - name: Birthday Wishes
+        run: echo "Happy Birthday Pillaiyarappa"
