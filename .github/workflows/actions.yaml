@@ -1,6 +1,6 @@
 name: Remote_runner
 
-on: workflow_dispatch
+on: push
 
 jobs:
   Test:
