@@ -5,9 +5,9 @@ run-name: Run of the simple workflow
 on:
   # Workflow run trigger events
   push:
-    branches: ["main"]
+    branches: ["GHA_exam_prep"]
   pull_request:
-    branches: ["main"]
+    branches: ["GHA_exam_prep"]
   # Manually trigger workflow run
   workflow_dispatch:
 
