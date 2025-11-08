@@ -4,13 +4,13 @@ run-name: Run of the complex workflow
 
 on:
   # Workflow run trigger events
-  push:
-    branches:
-       - GHA_exam_prep
-    paths-ignore:
-       - '**.md'
-  pull_request:
-    branches: ["GHA_exam_prep"]
+ #push:
+ #   branches:
+  #     - GHA_exam_prep
+   # paths-ignore:
+    #   - '**.md'
+  #pull_request:
+   # branches: ["GHA_exam_prep"]
   # Manually trigger workflow run
   workflow_dispatch:
 
