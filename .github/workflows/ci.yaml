@@ -6,11 +6,13 @@ on:
 jobs:
     test:
       runs-on: ubuntu-latest
+      env:
+        MAXIMUM_ATTEMPTS: ${{vars.MAXIMUM_ATTEMPTS}}
       steps:
         - name: Prevent reruns
           run: |
             # Exit if the run number is greater than the maximum number of attempts
-            if [ $RUN_ATTEMPT_NUMBER -gt $MAXIMUM_ATTEMPTS ]; then
+            if [ $GITHUB_RUN_ATTEMPT -gt $MAXIMUM_ATTEMPTS ]; then
               echo "Exiting because the run number is greater than the maximum number of attempts"
               exit 1
             fi
