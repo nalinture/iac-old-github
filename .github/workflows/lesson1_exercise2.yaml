@@ -4,7 +4,7 @@ run-name: Run of the simple workflow
 
 on:
   # Workflow run trigger events
-  push:
+  #push:
   #  branches: ["GHA_exam_prep"]
   #pull_request:
   #  branches: ["GHA_exam_prep"]
