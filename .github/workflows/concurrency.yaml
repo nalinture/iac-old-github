@@ -10,7 +10,7 @@ on:
 # Add your solution below this line
 concurrency:
      group: ${{github.workflow}}-${{github.ref}}
-     cancel-in-progress: ${{ contains( github.ref_name, 'releases/*') }}
+     cancel-in-progress: ${{ contains( github.ref_name, 'releases/') }}
     
 
 jobs:
