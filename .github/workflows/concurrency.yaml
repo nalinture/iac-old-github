@@ -1,0 +1,26 @@
+name: "Lesson 2 - Exercise 4"
+
+on:
+          push:
+            branches:
+              - main
+              # Match the release branches of the format: releases/1, releases/2, etc.
+              - "releases/[0-9]"
+
+# Add your solution below this line
+concurrency:
+     group: ${{github.workflow}}
+     cancel-in-progress: ${{ contains( github.ref_name, 'releases/*') }}
+    
+
+jobs:
+          release:
+            strategy:
+              matrix:
+                os: [ubuntu-latest, windows-latest]
+            runs-on: ${{ matrix.os }}
+            steps:
+              - name: Build and release
+                run: |
+                  echo "Building branch: ${{ github.ref }} for OS: ${{ matrix.os }}"
+                  sleep 10
