@@ -1,0 +1,21 @@
+name: "reusableCalled"
+
+on:
+    workflow_call:
+          secrets:
+            token:
+             required: true
+jobs:
+    greeting:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v1
+          with:
+           token: ${{ secrets.github }}
+           
+        - name: Greetings message
+          run: |
+            echo "Well done: $ACTOR you've implemented reusable workflows successfully!"
+          env:
+            ACTOR: ${{ inputs.actor }}
