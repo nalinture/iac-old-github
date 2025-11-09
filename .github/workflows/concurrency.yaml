@@ -1,11 +1,12 @@
 name: "Lesson 2 - Exercise 4"
 
 on:
-          push:
-            branches:
-              - main
+       #   push:
+        #    branches:
+         #     - main
               # Match the release branches of the format: releases/1, releases/2, etc.
-              - "releases/[0-9]"
+          #    - "releases/[0-9]"
+          workflow_dispatch:
 
 # Add your solution below this line
 concurrency:
