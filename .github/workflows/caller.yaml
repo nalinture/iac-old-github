@@ -1,0 +1,14 @@
+name: "caller"
+
+on:
+    workflow_dispatch:
+      inputs:
+          actor:
+              description: "The person who will receive the greeting"
+              required: true
+
+jobs:
+   Test:
+      uses: nalinture/iac-old-github/.github/workflows/reusableCalled.yaml@main
+      secrets:
+       token: ${{ secrets.GITHUB_TOKEN }}
